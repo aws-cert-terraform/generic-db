@@ -27,8 +27,6 @@ variable "db_name" {
     default = "generic-db"
 }
 
-vpc_security_group_ids 
-
 
 variable "sg_ids" {
     default = "TODO:makelist"
