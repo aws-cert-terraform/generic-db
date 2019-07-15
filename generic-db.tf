@@ -7,6 +7,7 @@ resource "aws_db_instance" "db" {
   engine_version         = "${var.engine_version}"
   instance_class         = "${var.instance_type}"
   name                   = "${var.db_name}"
+  skip_final_snapshot    = true
   username               = "postgres"
   password               = "change-this"
   // vpc_security_group_ids = []
