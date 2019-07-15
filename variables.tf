@@ -24,7 +24,7 @@ variable "instance_type" {
 
 
 variable "db_name" {
-    default = "generic-db"
+    default = "genericdb"
 }
 
 
