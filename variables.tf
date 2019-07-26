@@ -28,8 +28,9 @@ variable "db_name" {
 }
 
 
-variable "sg_ids" {
-    default = "TODO:makelist"
+variable "security_group_ids" {
+  description = "Security groups to associate"
+  type        = list(string)
 }
 
 // 

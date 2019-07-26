@@ -10,5 +10,5 @@ resource "aws_db_instance" "db" {
   skip_final_snapshot    = true
   username               = "postgres"
   password               = "change-this"
-  // vpc_security_group_ids = []
+  vpc_security_group_ids = var.security_groups
 }
