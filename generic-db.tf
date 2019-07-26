@@ -40,4 +40,5 @@ resource "aws_security_group_rule" "allow_mysql_port" {
   to_port = 3306
   protocol = "tcp"
   source_security_group_id = var.source_sg
+  security_group_id = element(var.security_group_ids, 0)
 }
