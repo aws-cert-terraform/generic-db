@@ -10,7 +10,7 @@ resource "aws_db_instance" "db" {
   skip_final_snapshot    = true
   username               = "postgres"
   password               = "change-this"
-  vpc_security_group_ids = concat(var.security_group_ids, ["${aws_security_group_rule.allow_mysql_port.id}"])
+  vpc_security_group_ids = var.security_group_ids
   db_subnet_group_name   = "${aws_db_subnet_group.default.id}"
 }
 
