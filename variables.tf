@@ -9,12 +9,12 @@ variable "storage_type" {
 }
 
 variable "engine" {
-    default = "postgres"
+    default = "mysql"
 }
 
 
 variable "engine_version" {
-    default = "11.2"
+    default = "5.7"
 }
 
 
@@ -26,6 +26,11 @@ variable "instance_type" {
 variable "db_name" {
     default = "genericdb"
 }
+
+variable "source_sg" {
+    description = "A source security group sg id"
+}
+
 
 
 variable "security_group_ids" {
