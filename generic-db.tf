@@ -11,4 +11,14 @@ resource "aws_db_instance" "db" {
   username               = "postgres"
   password               = "change-this"
   vpc_security_group_ids = var.security_group_ids
+  db_subnet_group_name   = "${aws_db_subnet_group.default.id}"
+}
+
+resource "aws_db_subnet_group" "default" {
+  name       = "awscert-db-group"
+  subnet_ids = var.subnet_ids
+
+  tags = {
+    Name = "My DB subnet group"
+  }
 }

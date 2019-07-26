@@ -33,6 +33,11 @@ variable "security_group_ids" {
   type        = list(string)
 }
 
+variable "subnet_ids" {
+  description = "VPC subnets"
+  type        = list(string)
+}
+
 // 
 // Tags 
 //
