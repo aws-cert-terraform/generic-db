@@ -27,10 +27,6 @@ variable "db_name" {
     default = "genericdb"
 }
 
-variable "source_sg" {
-    description = "A source security group sg id"
-}
-
 
 
 variable "security_group_ids" {
